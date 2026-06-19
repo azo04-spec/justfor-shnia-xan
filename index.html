@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ku">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Happy Birthday</title>
+
+<style>
+
+body{
+
+margin:0;
+
+background:
+
+url("birthday-bg.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+height:100vh;
+
+overflow:hidden;
+
+}
+
+button{
+
+position:absolute;
+
+left:50%;
+
+top:53%;
+
+transform:
+translate(-50%,-50%);
+
+padding:22px 55px;
+
+font-size:26px;
+
+border:none;
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
+#ff69b4,
+#ff2f84
+);
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message{
+
+display:none;
+
+position:absolute;
+
+inset:0;
+
+background:
+
+rgba(255,240,247,.95);
+
+overflow:auto;
+
+padding:60px;
+
+font-size:28px;
+
+line-height:2;
+
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button onclick="showMessage()">
+
+A message for you 🤍
+
+</button>
+
+<div
+class="message"
+id="message">
+
+<p>
+
+Happy BirthDay to you🎉❤️🤍
+
+</p>
+
+<p>
+
+ڕۆژی لە دایکبوونت پیرۆز بێت🤍
+
+</p>
+
+<p>
+
+تەمەنت پرڕ بەرەکەت بێت هەموو ڕۆژێکت هەر شادی وخۆشی بێت
+
+</p>
+
+<p>
+
+دووربی لە هەموو ناخۆشی و بەڵایەک
+
+</p>
+
+<p>
+
+ئەو تەمەنەی ماوتە لە پێناو خودا بەسەری ببەی
+
+</p>
+
+<p>
+
+ئەوەی باشە و خێری تێدایە خودا بێنێتە ڕێگات
+
+</p>
+
+<p>
+
+دوبارە ڕۆژی لە دایک بوونت پیرۆز بێت🎉❤️🥰
+
+</p>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document
+.getElementById(
+"message"
+)
+.style
+.display=
+"block";
+
+}
+
+</script>
+
+</body>
+
+</html>
