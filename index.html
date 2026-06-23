@@ -21,10 +21,10 @@ body{
 
 height:100vh;
 
+overflow:hidden;
+
 font-family:
 Segoe UI;
-
-overflow:hidden;
 
 background:
 url("birthday-bg.png");
@@ -45,7 +45,7 @@ position:absolute;
 
 left:50%;
 
-top:76%;
+top:80%;
 
 transform:
 translate(-50%,-50%);
@@ -62,8 +62,8 @@ background:
 
 linear-gradient(
 180deg,
-#ff6cb5,
-#ff2f84
+#ff72ba,
+#ff2d84
 );
 
 color:white;
@@ -76,19 +76,30 @@ font-weight:
 
 cursor:pointer;
 
+box-shadow:
+
+0 12px 35px rgba(
+255,
+0,
+120,
+.35
+);
+
 transition:
 .4s;
-
-box-shadow:
-0 12px 30px rgba(255,0,120,.35);
 
 }
 
 button:hover{
 
 transform:
-translate(-50%,-50%)
-scale(1.05);
+translate(
+-50%,
+-50%
+)
+scale(
+1.06
+);
 
 }
 
@@ -116,7 +127,7 @@ visibility:hidden;
 overflow:auto;
 
 padding:
-70px 28px;
+60px 28px;
 
 transition:
 1s;
@@ -140,15 +151,13 @@ scale(1);
 .message::before{
 
 content:
-"❤️🎉🌹🥳🤍🎁🥰";
+"💗 ✨ 🌸 🎉 💖";
 
 display:block;
 
-font-size:
-30px;
+font-size:30px;
 
-margin-bottom:
-25px;
+margin-bottom:25px;
 
 animation:
 float 2s infinite;
@@ -160,7 +169,7 @@ float 2s infinite;
 50%{
 
 transform:
-translateY(-8px);
+translateY(-10px);
 
 }
 
@@ -169,15 +178,15 @@ translateY(-8px);
 .title{
 
 font-size:
-42px;
+40px;
+
+text-align:center;
 
 color:
 #ff2f84;
 
 margin-bottom:
-35px;
-
-text-align:center;
+30px;
 
 }
 
@@ -189,36 +198,36 @@ font-size:
 line-height:
 1.9;
 
+text-align:center;
+
 color:
 #8a003d;
-
-text-align:center;
 
 margin-bottom:
 18px;
 
 }
 
-/* MOBILE */
+/* mobile */
 
 @media(max-width:700px){
 
 button{
 
-top:82%;
-
-padding:
-14px 28px;
+top:84%;
 
 font-size:
 15px;
+
+padding:
+14px 28px;
 
 }
 
 .title{
 
 font-size:
-32px;
+30px;
 
 }
 
@@ -226,16 +235,6 @@ p{
 
 font-size:
 19px;
-
-line-height:
-1.8;
-
-}
-
-.message{
-
-padding:
-50px 22px;
 
 }
 
@@ -246,6 +245,18 @@ padding:
 </head>
 
 <body>
+
+<!-- music -->
+
+<audio
+id="music"
+loop>
+
+<source
+src="birthday-music.mp3"
+type="audio/mpeg">
+
+</audio>
 
 <button onclick="showMessage()">
 
@@ -301,6 +312,17 @@ document
 .add(
 "show"
 );
+
+const music=
+document
+.getElementById(
+"music"
+);
+
+music.volume=.35;
+
+music.play()
+.catch(()=>{});
 
 }
 
